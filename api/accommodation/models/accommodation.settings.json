@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accommodations",
+  "info": {
+    "name": "accommodation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "guests": {
+      "type": "integer"
+    },
+    "beds": {
+      "type": "integer"
+    },
+    "is_featured": {
+      "type": "boolean"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}
